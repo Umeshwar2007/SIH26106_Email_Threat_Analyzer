@@ -1,0 +1,22 @@
+Delivered-To: user@final-corp.com
+Received: from gateway02.final-corp.com (gateway02.final-corp.com [198.51.100.99])
+    by mailbox01.final-corp.com (Postfix) with ESMTP id 5K8B12
+    for <user@final-corp.com>; Sat, 12 Sep 2026 18:05:40 +0000 (UTC)
+Received: from border.regional-relay.net (border.regional-relay.net [203.0.113.12])
+    by gateway02.final-corp.com (Postfix) with ESMTPS id 4K7A11
+    for <user@final-corp.com>; Sat, 12 Sep 2026 18:04:20 +0000 (UTC)
+Received: from hub01.regional-relay.net (hub01.regional-relay.net [192.0.2.77])
+    by border.regional-relay.net (Postfix) with ESMTP id 3K6Z10;
+    Sat, 12 Sep 2026 18:02:10 +0000 (UTC)
+Received: from client-origin.sender-site.org (client-origin.sender-site.org [198.51.100.5])
+    by hub01.regional-relay.net (Postfix) with ESMTP id 2K5Y09;
+    Sat, 12 Sep 2026 18:00:00 +0000 (UTC)
+From: Analyst <analyst@sender-site.org>
+To: user@final-corp.com
+Subject: Forensic Incident Log Trace
+Date: Sat, 12 Sep 2026 17:59:50 +0000
+Message-ID: <trace-7788190@sender-site.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+Multi-hop relay trajectory sample containing 4 authenticated MTA hops.

@@ -1,0 +1,23 @@
+Delivered-To: accountant@target-firm.com
+Received: from suspicious-vps.attacker-net.org (suspicious-vps.attacker-net.org [203.0.113.88])
+    by mx.target-firm.com (Postfix) with ESMTP id 9B71A21
+    for <accountant@target-firm.com>; Sun, 13 Sep 2026 14:22:10 +0000 (UTC)
+Received-SPF: fail (mx.target-firm.com: domain of ceo@trusted-corp.com does not designate 203.0.113.88 as permitted sender) client-ip=203.0.113.88;
+Authentication-Results: mx.target-firm.com;
+    spf=fail smtp.mailfrom=ceo@trusted-corp.com;
+    dmarc=fail (p=reject) header.from=trusted-corp.com;
+From: "Chief Executive Officer" <ceo@trusted-corp.com>
+To: accountant@target-firm.com
+Reply-To: executive-wires@secure-offshore-relay.com
+Subject: URGENT: Wire Transfer Authorization Required Immediately
+Date: Sun, 13 Sep 2026 14:21:00 +0000
+Message-ID: <spoof-98124018@attacker-net.org>
+Return-Path: <bounce@attacker-net.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+Please immediately wire $45,000 to the vendor account specified below for international closing.
+Do not call to verify as I am currently in a restricted confidential meeting.
+
+Thank you,
+Executive Office

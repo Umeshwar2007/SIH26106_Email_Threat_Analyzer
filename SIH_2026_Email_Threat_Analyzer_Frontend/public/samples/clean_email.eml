@@ -1,0 +1,29 @@
+Delivered-To: recipient@company.com
+Received: from mail-relay.acme-corp.com (mail-relay.acme-corp.com [198.51.100.25])
+    by mx.company.com (Postfix) with ESMTPS id 4K9L29184
+    for <recipient@company.com>; Tue, 15 Sep 2026 10:15:30 +0000 (UTC)
+Received-SPF: pass (mx.company.com: domain of newsletter@acme-corp.com designates 198.51.100.25 as permitted sender) client-ip=198.51.100.25;
+Authentication-Results: mx.company.com;
+    dkim=pass header.i=@acme-corp.com header.s=202601;
+    spf=pass smtp.mailfrom=newsletter@acme-corp.com;
+    dmarc=pass header.from=acme-corp.com;
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=acme-corp.com; s=202601;
+    h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type;
+    bh=w6kRkF...=;
+    b=kL92...=;
+From: ACME News <newsletter@acme-corp.com>
+To: recipient@company.com
+Reply-To: newsletter@acme-corp.com
+Subject: Quarterly Project Status Update - Q3 2026
+Date: Tue, 15 Sep 2026 10:14:50 +0000
+Message-ID: <20260915101450.98124.acme@mail-relay.acme-corp.com>
+Return-Path: <newsletter@acme-corp.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+Hello Team,
+
+Attached is the quarterly progress update for Q3. All deliverable milestones remain on track.
+
+Best regards,
+ACME Operations

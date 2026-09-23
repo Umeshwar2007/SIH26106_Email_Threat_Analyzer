@@ -1,0 +1,350 @@
+Delivered-To: fshark49@gmail.com
+Received: by 2002:a05:6022:18c:b0:111:3925:bfaa with SMTP id 12csp1327011lag;
+        Sat, 12 Sep 2026 00:38:10 -0700 (PDT)
+X-Received: by 2002:a05:620a:439c:b0:939:8d65:fa9b with SMTP id af79cd13be357-939ea1dc0c3mr1030774885a.31.1789198689914;
+        Sat, 12 Sep 2026 00:38:09 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1789198689; cv=none;
+        d=google.com; s=arc-20260327;
+        b=okwVlmr33YL3NzuRnMyBCEqEfI38F8oPkGgKWgI6KlKNfsqxGFguIjvMgqPlKfozPH
+         gfwe+LJ1GuAdlAQb6s0rn088o1sxMJMHGTZ1AvupzNV7oEdOu6Iv0K7jVh2iwml6RJnL
+         +nxjcrze4TyB4+7lut4zH6YsQbhw40ihk1wmqsGSXHZ8iYp/9TUftBV1Zl30OcorDVE4
+         m8D269a6VNdllssM9cdmTHKvsdclIBJ7Zb3A2YUV5pWCTzr0YFOvaULERR2JtzbGWU/9
+         H4qfLI4D20GuT4JlUaPEOThiZEdC1Tprz+Xzek/Wxg4A96XsG06hbBvtRp/TqHUjU4z+
+         pKyw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:list-unsubscribe-post:list-unsubscribe:feedback-id:reply-to
+         :subject:message-id:mime-version:from:date:content-transfer-encoding
+         :dkim-signature:dkim-signature;
+        bh=2EE1z+Q9GK02hGiGIReJvHCM3pIVt5g90JqAQvtkhXw=;
+        fh=zC2IWX2dEW4E0TscM28ZDVIGN2js3fZwzwioS+FhSxE=;
+        b=Di8/pyBznrwyQHybJaLKjaCk5q30XFafQ/vXtY+0LSpFj4NKLgmINRrO0kBwnZRf/l
+         jyHZaj/GqeAN0uCIAY5fuWUB38hp4yrHIcPYMPFmT92XhNXkUQTKMdgwMOZwmFVwMT2I
+         BDeZh7sY+gddWqQOqOpqdS5JAIY9+7+pZZPS0NDa7cvqkWws7+5rj5Ocfm+Uu2pFy2Yd
+         6rkVwVYkq8XIYG+dExaMI5ZLZB6gkLXaAjEFoPAi4zmA/43KrCfYoZIcB+N7k6lAVROI
+         w8d5Lth7+paKkbCBE9DoNfx8iTTsuczlwKmehwbCSVCrnqKnGIQtuYlbvoa47BIpqnSN
+         zkfQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mail.internshala.com header.s=PNW header.b=pUl1ju0t;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=zAyHYMK0;
+       spf=pass (google.com: domain of bounces+48138813-0557-fshark49=gmail.com@pnw.mail.internshala.com designates 159.183.103.179 as permitted sender) smtp.mailfrom="bounces+48138813-0557-fshark49=gmail.com@pnw.mail.internshala.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=mail.internshala.com
+Return-Path: <bounces+48138813-0557-fshark49=gmail.com@pnw.mail.internshala.com>
+Received: from o2668.msg.mail.internshala.com (o2668.msg.mail.internshala.com. [159.183.103.179])
+        by mx.google.com with ESMTPS id af79cd13be357-939e811aaa6si469251185a.301.2026.09.12.00.38.09
+        for <fshark49@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Sat, 12 Sep 2026 00:38:09 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+48138813-0557-fshark49=gmail.com@pnw.mail.internshala.com designates 159.183.103.179 as permitted sender) client-ip=159.183.103.179;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mail.internshala.com header.s=PNW header.b=pUl1ju0t;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=zAyHYMK0;
+       spf=pass (google.com: domain of bounces+48138813-0557-fshark49=gmail.com@pnw.mail.internshala.com designates 159.183.103.179 as permitted sender) smtp.mailfrom="bounces+48138813-0557-fshark49=gmail.com@pnw.mail.internshala.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=mail.internshala.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.internshala.com;
+	h=content-transfer-encoding:content-type:date:from:mime-version:subject:
+	reply-to:feedback-id:list-unsubscribe:list-unsubscribe-post:to:cc:content-type:
+	date:feedback-id:from:subject:to;
+	s=PNW; t=1789198688;
+	bh=2EE1z+Q9GK02hGiGIReJvHCM3pIVt5g90JqAQvtkhXw=;
+	b=pUl1ju0taKcDmSoBtrBxMclceO1O3GCz7gu+z3qOkUhDFN5maiHiLuJYDl+4eqkf1U2m
+	La1lMpK9UkCHbGpheP8xXL1HMqfiqRXq9dEN7vtOyZ+YHlphcv4bh5B8KaYSLxIlN6zYtL
+	hDemzSo6oRjhLWW8C1nYj4QsDmdHUlQUPvRJWhV0kUqcYuplyys99GXZTVMkrvK2jXVR2R
+	4AAmIK9Cfi6B5/j5I2iywRA/424b2tsif3ubx5oimIdrzWwe2ckwPiIj+1CQvWdvBRTS7N
+	jV9j6yivna78OGboWd4voYLF1CmN+fzQyQDMeQIp+p8sy2mm8U8EU9EgFol7VHOA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-transfer-encoding:content-type:date:from:mime-version:subject:
+	reply-to:feedback-id:list-unsubscribe:list-unsubscribe-post:to:cc:content-type:
+	date:feedback-id:from:subject:to;
+	s=smtpapi; t=1789198688;
+	bh=2EE1z+Q9GK02hGiGIReJvHCM3pIVt5g90JqAQvtkhXw=;
+	b=zAyHYMK0+bAkS8pyBmYZeA0lF+Uy41ueV8bEb0BkGPNZabsudKcaLNFgrddGwhYzoaeh
+	s0YQIbdfz7lDUMjwQnSACH4BRJc0pFqYP6guUWZBIF9ZpDBh1s79/zM4aCgWAZwE6WIYrJ
+	FliQd6xhMiduu3umAgGTaaqfw1S7sntsM=
+Received: by recvd-75688db57b-zp8fc with SMTP id recvd-75688db57b-zp8fc-1-6AA4ED05-1A
+	2026-09-12 06:11:17.427439529 +0000 UTC m=+982252.250791961
+Received: from NDgxMzg4MTM (unknown)
+	by geopod-ismtpd-canary-0 (SG)
+	with HTTP
+	id dYL9Y3lURnGsjvq0pvmnaA
+	Sat, 12 Sep 2026 06:11:17.309 +0000 (UTC)
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Date: Sat, 12 Sep 2026 07:38:08 +0000 (UTC)
+From: ISP Team from Internshala <student@mail.internshala.com>
+Mime-Version: 1.0
+Message-ID: <dYL9Y3lURnGsjvq0pvmnaA@geopod-ismtpd-canary-0>
+Subject: Your ISP application status update is here
+Reply-To: isp-hiring-campaigns@internshala.com
+Feedback-ID: 
+ =?us-ascii?Q?N5yGLXii2M21egby6wgiPUZyNqsmfqeD9bjjEpzS7xAT2P6ZerzWtdY=2ENVLzgM?=
+ =?us-ascii?Q?Nk3ek=2EEw=3AzhM9FGqAn0GqwizgcQRXSzOzZfAd=2Ed?=
+ =?us-ascii?Q?FgsS6bWai8cmDMUQKCWb=5FKZO8wPfH59L4ZjBOXW?=
+ =?us-ascii?Q?Q=3ADC03=3AMoe?=
+List-Unsubscribe: 
+ =?us-ascii?Q?=3Chttps=3A=2F=2Flink=2Einternshala=2Ecom=2Fv1=2Femailunsubscribe=3Fqmoe=3DlYnctYk?=
+ =?us-ascii?Q?kej=5FWVknfSuIqfHCxPbUMYHWNpdVRyZEjLIytSl?=
+ =?us-ascii?Q?S3SqLuSAcsa5Q99r=5FV5fm0vJ3BiA-Obyiat=2EF1k?=
+ =?us-ascii?Q?R8=2E5fGPQoT=2ERdpODL87LnLurbohr4EyzImDPE0U?=
+ =?us-ascii?Q?bp5VoA96euWiy1gjMosK5mPYg-9jnuNx9WMTsGb?=
+ =?us-ascii?Q?WwMnSPYWvSjAupJlzNNHpKk2GxCBCtdAoozo24o?=
+ =?us-ascii?Q?a=2E9SOmtmjVVPNnfBj9wWvlEhnY3svo9cqUH1RNZ?=
+ =?us-ascii?Q?D8WcIbexbRRf898j9R4JnrReOqlExC4OIKay86L?=
+ =?us-ascii?Q?Wi1KaIKPzwnx4-PGYTOe9Z=5FafELbNeT0=2Eo19=2Ef9?=
+ =?us-ascii?Q?mNVjvXl6i0Ur6hIOKWhSBQBDXQWKBkWYX7KLcHJ?=
+ =?us-ascii?Q?iw-oO0Erpb6tdxLX8x4pc3JRlzeny4ReFLl8CRE?=
+ =?UTF-8?Q?=5FJM8s=5Fcd=3E=2C=0D=0A?=
+	<mailto:unsubscribe-DC03@moengage.co?subject=Unsubscribe |
+ =?us-ascii?Q?lYnctYkkej=5FWVknfSuIqfHCxPbUMYHWNpdVRyZEjLIytSlS3SqLuSAcsa5Q99r?=
+ =?us-ascii?Q?=5FV5fm0vJ3BiA-Obyiat=2EF1kR8=2E5fGPQoT=2ERdpOD?=
+ =?us-ascii?Q?L87LnLurbohr4EyzImDPE0Ubp5VoA96euWiy1gj?=
+ =?us-ascii?Q?MosK5mPYg-9jnuNx9WMTsGbWwMnSPYWvSjAupJl?=
+ =?us-ascii?Q?zNNHpKk2GxCBCtdAoozo24oa=2E9SOmtmjVVPNnfB?=
+ =?us-ascii?Q?j9wWvlEhnY3svo9cqUH1RNZD8WcIbexbRRf898j?=
+ =?us-ascii?Q?9R4JnrReOqlExC4OIKay86LWi1KaIKPzwnx4&bo?=
+ =?us-ascii?Q?dy=3DHi!?= I am requesting to be removed from all future
+ marketing emails from your company.>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+x-campaignid: 6aa3d210e2c97ff1a834c4c2
+X-SG-EID: 
+ =?us-ascii?Q?u001=2EA1eM1zlixl+E56Pk9Xhp4AxBNwJsfMhse6YkSVxngNASerFnOqepWG28y?=
+ =?us-ascii?Q?eF0uq7DAjdc2z5=2Fk3s7Lw5g6xogUl6SmVriFlf9?=
+ =?us-ascii?Q?i3R5eXYvtOwok8D0ai9R=2FtgK6dcma7RV=2FErBQ8I?=
+ =?us-ascii?Q?lIo1v1qEo9nZdaDRhBRHC3usxg4L+FWDkVk3jkO?=
+ =?us-ascii?Q?N9L+AnL4SxRLgdQ0xCADk34IJghao4QnAzeaKFm?=
+ =?us-ascii?Q?5UeKdquJ1wUKojPDI=2FAmwa9NJTa5WoGJWR1HR5l?=
+ =?us-ascii?Q?=2FBfZDMbOLbeskzgA+kFg0iKV6g=3D=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2ESdBcvi+Evd=2FbQef8eZF3BiXNL=2Fi5O73RDXPXSeOxS7mQvD3NeNHH3QYUe?=
+ =?us-ascii?Q?iT5KaS2XRElJbFRjLysbUQ5QxWoRE=2FfGxG4B0rr?=
+ =?us-ascii?Q?Yd7OZjQ=2F6p65WI+kWVWtawB4i9TmXKK1CRjI+Ic?=
+ =?us-ascii?Q?gO+8rp3dC3KeZTCvWRkkJeHMTgWShsNN7mxtXUc?=
+ =?us-ascii?Q?pOAqJz4D8dt0+eKNebjVKUGBLbH4hk1nK7JHoW8?=
+ =?us-ascii?Q?uJESg4F6zH=2F7wuS=2FL6FCB4lKDKOpseXMdb7QHZ4?=
+ =?us-ascii?Q?5GUshqSaZhPN30XVEdAUDSCVuztzNZsQJQWGURf?=
+ =?us-ascii?Q?LNqmurSsYrw4JBpbK1O7pLUD=2FSnwtiG=2F8907y9d?=
+ =?us-ascii?Q?jpv0yl3WJmFP+Ld0vTF0yvdhfmy2AxiMIFcIdjR?=
+ =?us-ascii?Q?I9C2Qz6MoEdtdMjofnLWOiuvcbR0lzuUyq4jSUG?=
+ =?us-ascii?Q?9l5cz+QWlMteAJV0gmQ=3D?=
+To: fshark49@gmail.com
+X-Entity-ID: u001.+jUgc+E7SJVIlsNieVsaGA==
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang=3D"en"><head><meta name=3D"x-apple-disable-message-reformatting"=
+/><meta content=3D"IE=3Dedge" http-equiv=3D"X-UA-Compatible"/><meta content=
+=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Type"/><meta content=
+=3D"telephone=3Dno, date=3Dno, address=3Dno, email=3Dno, url=3Dno" name=3D"=
+format-detection"/><meta content=3D"width=3Ddevice-width; initial-scale=3D1=
+.0; maximum-scale=3D1.0; user-scalable=3Dno;" name=3D"viewport"/><title>Int=
+ernshala Student Partner Program</title><!--[if gte mso 9]> <xml> <o:Office=
+DocumentSettings> <o:AllowPNG/> <o:PixelsPerInch>96</o:PixelsPerInch> </o:O=
+fficeDocumentSettings></xml> <![endif]--><style type=3D"text/css">
+            #outlook a {
+                padding: 0;
+            }
+           =20
+            body {
+                width: 100% !important;
+                -webkit-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
+                margin: 0;
+                padding: 0;
+            }
+           =20
+            .ExternalClass {
+                width: 100%;
+            }
+           =20
+            .ExternalClass,
+            .ExternalClass p,
+            .ExternalClass span,
+            .ExternalClass font,
+            .ExternalClass td,
+            .ExternalClass div {
+                line-height: 100%;
+            }
+           =20
+            img {
+                outline: none;
+                text-decoration: none;
+                -ms-interpolation-mode: bicubic;
+            }
+           =20
+            a img {
+                border: none;
+            }
+           =20
+            table td {
+                border-collapse: collapse;
+            }
+           =20
+            table,
+            tr,
+            td {
+                box-sizing: border-box;
+                border-spacing: 0 !important;
+                mso-table-lspace: 0px !important;
+                mso-table-rspace: 0pt !important;
+                mso-line-height-rule: exactly !important;
+            }
+
+        </style><meta content=3D"noindex, nofollow, noarchive" name=3D"robo=
+ts"/><meta content=3D"noindex, nofollow, noarchive" name=3D"googlebot"/></h=
+ead><body aria-disabled=3D"false" style=3D"margin: 0px; padding: 0px; min-w=
+idth: 100%; text-size-adjust: 100%; background-color: rgb(255, 255, 255); b=
+ox-sizing: border-box;"><div style=3D"display:none; overflow:hidden; color:=
+#FFFFFF; opacity:0;">Internshala Student Partner program</div><table bgcolo=
+r=3D"#FFF" cellpadding=3D"0" cellspacing=3D"0" style=3D"margin: 0 auto; pad=
+ding: 0; width: 642px; min-width: 642px; border: 1px solid #DDD; border-rad=
+ius: 8px; background-color: #FFF; box-sizing: border-box; overflow: hidden;=
+" width=3D"642px"><thead><tr><td align=3D"center" height=3D"72px"><a href=
+=3D"https://link.internshala.com/v1/emailclick?q=3D52B8wiVmez8kjNDutf_G_BT4=
+DdqeDunf5Nf5Yb8MBgYqIptmhRg8VOCk-WfT8W6aV96DC2J2wvcf_Q5dB_k5t5.tgjWoMJZDNeE=
+UEdR2zTIpy4EJt5oz6gu27Cpp5PIXCHVtr6ZMXIzqv.6fGFQEh0ju_AF8poOi5WBKy0bvY0.VHv=
+ujWdarDm3Sg75DkFBU_ldKv_z4-jAF2dgm6GHyNVvCwnxsArpsCKe4vfSJh_YNH83EcL49zW5v4=
+cTlt5MFCAtwgJrOfwTFbVzJAcw-47l7VlTtC0eOUBAH1pAnGu_xS1Ty3vIeFDh493J8tmpuhS8T=
+tfrZLuI6ZQWjad4.Eg-fF7QQ1WHsFi9qo7ElJ.9oFt.zZ4KsTlbiepUSk54WcER-GrsOjw_egSX=
+0EJjrtqdEsJnioQz.dgY7lG5KKfeJlWIPY5uzbTOC58qDsGbsVF9UcQB7Ihdj7gsCcg4BJGVau5=
+borpdfJse8abtmqN_muz.8GMQdUfgzrRorWShwuTts7akEWoFYXVr9rCXhsyT_jXPDNRWF.mq1z=
+_qY7IR8EJmybTf2d71lSGdZJANf9SJbvM8.JkSsIJWNzqKGgnLt5WduCTVF" style=3D"margi=
+n: 0; padding: 0; display: block; text-decoration: none !important; outline=
+: none !important;" target=3D"_blank"><img alt=3D"Internshala" src=3D"https=
+://internshala.com//static/images/mail/new/internshala_logo.png" style=3D"m=
+argin: auto; padding: 0; display: block;" width=3D"144px"/></a></td></tr></=
+thead><tbody bgcolor=3D"#FFFFFF" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%"><tr><td><div style=3D"margin:0;width:100%;border-bott=
+om-width:1px;border-bottom-style:solid;border-bottom-color:#000000;"><br></=
+div></td></tr><tr><td style=3D"height:100%;vertical-align:baseline;"><p sty=
+le=3D"margin:0;padding:12px 24px 15px 24px;font-family:Arial;font-size:16px=
+;font-weight:400;line-height:25px;letter-spacing:0em;text-align:left;color:=
+#212121;"> You're invited to join the <strong>Internshala Student </strong>=
+<strong>Partner </strong>program to develop professional skills while gaini=
+ng valuable experience. </p></td></tr><tr><td align=3D"center"><a href=3D"h=
+ttps://link.internshala.com/v1/emailclick?q=3D26Q.RbspzrVnhcoF_ybxcAdVIVXmj=
+.plJd8YHH5c3AHzD9e3wrTthype-8vSYm5rxYl5Z.jVf71feL3ul7YDRQ17p8TKl4gvhs6kB2jU=
+fJZtGqIO1MzuXABV4m3CkBSTNXCka3ifHnFDwbGdYXjpnX9tydgWf9ER_BfUbqNooBQoizcHaRM=
+hBWneVmJ72DePa477sAcw-jAF2dgm6GHyNVvCwnxsArpsCKe4vfSJh_YNH83EcL49zW5v4cTlt5=
+MFCAtwgJrOfwTFbVzJAcw-47l7VlTtC0eOUBAH1pAnGu_xS1Ty3vIeFDh493J8tmpuhS8TtfrZL=
+uI6ZQWjad4.Eg-wQV98sco9AtTF8BdjjDH1WU5NPIi7BZ4rs5M8mMdYPqb-0lgO0S1hKZdXYuMC=
+j_yN89E_exKjZGOf1olv8BF8stLaHU9zYBRbZZpj4O9KTZG7gYOxmWdAS4qjwvCtoUkCU0f8rPC=
+.8Kn5y3v3ctAuxRI6IdEQUjdbvMDOwsenDHSbJ6PARvbQHW8N7cXpMOfRQRy4vDaoBr6Jpzg7U.=
+mEegQ8Xs5NRGWWC9QIv4pX8gyO7MY5isvNhYKDkOVNA3vn4ozkElzP" style=3D"display: b=
+lock;text-decoration: none;" target=3D"_blank"><table bgcolor=3D"#ffffff" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"margin:0 auto;padd=
+ing:0;width:100%;"><tbody><tr><td height=3D"24px"><br></td></tr><tr><td sty=
+le=3D"height:100%;vertical-align:baseline;"><p style=3D"margin:0;padding:0;=
+font-family:Arial;font-size:28px;font-weight:800;line-height:36px;letter-sp=
+acing:0em;text-align:left;color:#00489A;"><span style=3D"margin:0;padding:0=
+ 0 0 24px;font-family:Arial;">Ready to represent us</span></p></td></tr><tr=
+><td height=3D"4px"><br></td></tr><tr><td style=3D"height:100%;vertical-ali=
+gn:baseline;"><p style=3D"margin:0;padding:0;font-family:Arial;font-size:18=
+px;font-weight:500;line-height:24px;letter-spacing:0em;text-align:left;colo=
+r:#00489A;"><span style=3D"margin:0;padding:0 0 0 24px;font-family:Arial;">=
+in PA College?</span></p></td></tr><tr><td height=3D"8px"><br></td></tr><tr=
+><td><div style=3D"margin:0 0 0 24px;width:43%;border-bottom-width:1px;bord=
+er-bottom-style:solid;border-bottom-color:#00489A;"><br></div></td></tr><tr=
+><td height=3D"8px"><br></td></tr><tr><td style=3D"height:100%;vertical-ali=
+gn:baseline;"><p style=3D"margin:0;padding:0;font-family:Arial;font-size:16=
+px;font-weight:700;line-height:20px;letter-spacing:0em;text-align:left;colo=
+r:#00489A;"><span style=3D"margin:0;padding:0 0 0 24px;font-family:Arial;">=
+Join the Internshala Student Partner Program</span></p></td></tr><tr><td he=
+ight=3D"24px"><br></td></tr></tbody></table></a></td></tr><tr><td style=3D"=
+height:100%;vertical-align:baseline;"><p style=3D"margin:0;padding:12px 24p=
+x 10px 24px;font-family:Arial;font-size:17px;font-weight:400;line-height:25=
+px;letter-spacing:0em;text-align:left;color:#212121;"><span style=3D"margin=
+:0;font-family:Arial;font-weight:bold;">Program benefits include:</span></p=
+></td></tr><tr><td style=3D"height:100%;vertical-align:baseline;"><p style=
+=3D"margin:0;padding:0 24px 10px 56px;font-family:Arial;font-size:15px;font=
+-weight:400;line-height:25px;letter-spacing:0em;text-align:left;color:#2121=
+21;"><span style=3D"margin:0;font-family:Arial;font-weight:bold;">=F0=9F=92=
+=8E Learning opportunity</span> - Masterclasses by industry professionals <=
+/p></td></tr><tr><td style=3D"height:100%;vertical-align:baseline;"><p styl=
+e=3D"margin:0;padding:0 24px 10px 56px;font-family:Arial;font-size:15px;fon=
+t-weight:400;line-height:25px;letter-spacing:0em;text-align:left;color:#212=
+121;"><span style=3D"margin:0;font-family:Arial;font-weight:bold;">=F0=9F=
+=92=8E Career development</span> - Certificates and recommendation letters =
+</p></td></tr><tr><td style=3D"height:100%;vertical-align:baseline;"><p sty=
+le=3D"margin:0;padding:0 24px 0 56px;font-family:Arial;font-size:15px;font-=
+weight:400;line-height:25px;letter-spacing:0em;text-align:left;color:#21212=
+1;"><span style=3D"margin:0;font-family:Arial;font-weight:bold;">=F0=9F=92=
+=8E Skill building</span> - Develop leadership and communication skills </p=
+></td></tr><tr><td style=3D"height:100%;vertical-align:baseline;"><p style=
+=3D"margin:0;padding:12px 24px 0 24px;font-family:Arial;font-size:15px;font=
+-weight:400;line-height:25px;letter-spacing:0em;text-align:left;color:#2121=
+21;"><strong>Who can apply? B.Tech</strong> students at <strong>PA College<=
+/strong> can learn more about the program by clicking below. </p></td></tr>=
+<tr><td align=3D"center" style=3D"height:100%;vertical-align:baseline;"><di=
+v><a href=3D"https://link.internshala.com/v1/emailclick?q=3DtOo_BVS_cI5MUQy=
+IQpAagNBprM0QD6Hfn8pOVKWdD5_petd9fWL59vYv-XLXbEKpBqSl73pMv_IGtRwh5v8aJVdvXR=
+gpO4MC1x3ZxSt8o71BN.IDOE82co_d60R6Wt5YP2q4b8yI6jarU3azuBVsJHRzvC8jsZKpmDExv=
+TDy9izx3lsCUFd6erhwvcLyS5ddNQ9yQPgE-jAF2dgm6GHyNVvCwnxsArpsCKe4vfSJh_YNH83E=
+cL49zW5v4cTlt5MFCAtwgJrOfwTFbVzJAcw-47l7VlTtC0eOUBAH1pAnGu_xS1Ty3vIeFDh493J=
+8tmpuhS8TtfrZLuI6ZQWjad4.Eg-eEfVYXZK8kukjVRpA4N7eCyZ2RF.Bc5PCe_YNJcqMW1J-Co=
+zFi7WtN4DQiC2KAiTTCJefOWwWe1fBJHiLN4Too8k6jrHhtbky2WCflV.YEjXPNIWAztskKOLXn=
+nX3M31WL9RdjL_8JW0KKYFPqhn7ef7QNqyn78r5mmkgXxDJpvzYznDnKKDXLIDkMP0vKTlnF9d6=
+ed20_2iprLk9iPL3AUA7a5Pz1wlkgD0IrnsYErK4c0MOdXoTXO3aQc2UfWFJUjEQDXMs" style=
+=3D"margin: 0 auto; padding 0; display: block; text-decoration: none !impor=
+tant; text-align: center;" target=3D"_blank"><p style=3D"margin:20px 0 20px=
+ 20px;padding:13px 35px;display:inline-block;border:0;border-radius:5px;bac=
+kground-color:#00489A;font-family:Arial;font-size:18px;font-weight:700;line=
+-height:23px;letter-spacing:0em;text-align:center;color:#FFFFFF;">LEARN MOR=
+E</p></a></div></td></tr></tbody><tfoot><tr><td align=3D"center" height=3D"=
+118px" style=3D"vertical-align: top;"><div style=3D"margin: auto; padding: =
+0; width: 608px; min-width: 608px; border-top: 1px solid #DDD;"><br></div><=
+p style=3D"margin: 0; padding: 16px 16px 0 16px; font-family: Arial; font-s=
+ize: 14px; font-weight: 400; line-height: 22px; letter-spacing: 0em; text-a=
+lign: center; color: #666;">Internshala (Scholiverse Educare Pvt. Ltd.)</p>=
+<p style=3D"margin: 0; padding: 0 16px 0 16px; font-family: Arial; font-siz=
+e: 14px; font-weight: 400; line-height: 22px; letter-spacing: 0em; text-ali=
+gn: center; color: #666;">901A and 901B, Iris Tech Park, Sector - 48, Sohna=
+ Road, Gurugram</p><p style=3D"margin: 0; padding: 16px; font-family: Arial=
+; font-size: 14px; font-weight: 400; line-height: 22px; letter-spacing: 0em=
+; text-align: center; color: #666;">Not interested right now? Unsubscribe <=
+a href=3D"https://link.internshala.com/v1/emailclick?q=3DccWivRtmjN8lYCqQjX=
+_Hmp2VVO85wf_.mep4CpaIPhxKeBPSTCWFCqHB-SPAvrAeivHEnvIAn8FmUYdMkFoyqOSuCXyxn=
+N7fFmQ.S83C4x15ETFpTNp6VulLW48ClqoiNEpWXkqPSEFhwSr7KBbBradlHBk2OG3rBPEZEnNH=
+wLKekQwzkUFxS_6SWndlKn7.bDAF2Y9w-jAF2dgm6GHyNVvCwnxsArpsCKe4vfSJh_YNH83EcL4=
+9zW5v4cTlt5MFCAtwgJrOfwTFbVzJAcw-47l7VlTtC0eOUBAH1pAnGu_xS1Ty3vIeFDh493J8tm=
+puhS8TtfrZLuI6ZQWjad4.Eg-k6Z7IEWxQUn5jwRmamdlyDKtuCbJMzBl1vkUlXoeHN5Q-tLuAy=
+S_v270gtCakJBej_Kr665.Rb8aAlziGiF69._k0SyhXn4VBRO9IC3y5ONpbKvPdwm.1c6v9FnQT=
+SntqrE3Ow9Kg080Ph8jIrL5BPuI7qwtAot90_Q">here</a>. <a href=3D"https://link.i=
+nternshala.com/v1/emailclick?q=3DccZ0c_ty7Rimw6lb1fLHm8OC4G2MKu8jMmzm646Lwe=
+8_S2Oh0p_5mD6I-2rXJnygqcGhAmHzGVa0jpDC.8Z9OU3FgzQtab5G6XP2CkFWXO3zytPd9Wrns=
+isq1l7izas3SfuYwSv_AnUIqSFDmr3RpuxSvUMVoO8rsVdAgSJrk3r10M8C5T0Eb0sAu9YG7vpU=
+EogDnpLE-jAF2dgm6GHyNVvCwnxsArpsCKe4vfSJh_YNH83EcL49zW5v4cTlt5MFCAtwgJrOfwT=
+FbVzJAcw-47l7VlTtC0eOUBAH1pAnGu_xS1Ty3vIeFDh493J8tmpuhS8TtfrZLuI6ZQWjad4.Eg=
+-6mqEWGJJ4TS7EzciLTlf72VQ4Sqsck.4Xzr02PMJCgMj-jutDcSh69vBa3WUjbx5MT_td.NrTP=
+Cxi5Kbqm0q3HT2Ni2dLsX2MR6JoZpQWxQXtrCicI4G8J_jyu0XGigCyafwdcdlXeg">Privacy =
+Policy</a></p></td></tr></tfoot></table><img src=3D"https://u48138813.ct.se=
+ndgrid.net/wf/open?upn=3Du001.g8DFrwzN8-2FRlOtPiYl6ZTRrkTMU6wDWjibcPbrqH5AX=
+jDCM8Ccwa2tSfcuwrQbp3Ln59TH6Kt1tTI-2Bg1ci1nVoJ4uMgrg3038k-2FspcFA2wpQmEfe1f=
+z60aCpSoglHoy5V9JckMsMLhg9G6TpUkYO7v2FuMWqkMre6ZwBVF1Qr2Bidkbo6x9aUhTDX6-2B=
+OvaTiQylXhiuEr5tpHdospWeWt6Ge-2FNny9UEXUzAXbUUsoTgXg7GDSQDAF1sHyHU2bw-2BinW=
+VNfI5fzZheV-2Bgi9cc86-2B4814YgY6CPGw2x-2Bpl9C2N7B9IYjrI17JK3wdoWqaff0HiYMjX=
+6Pv6SL-2FtFmr3EJpViEMJQfWG33Tgtk-2FojLmHL9rYuzn9SxBwwPUR2m-2B03j-2F1Xs-2FS4=
+cXjKaTbM1KsL487FZgYneDn-2Fy8SmhUXK6An-2F-2BxRh9L8FoEcwTt2CaLfk0gAQnBtoi4-2B=
+i1zg49jycftafJ2P00YOtuLGd9rQTh-2FX-2B8-2FrF-2BF-2Bt8NrYYGr-2FFSIFZf-2B9RXow=
+-2FGExapSyJ-2F9lLxE1KfYtEjrYoV8NZ882LOII0RvUQR2gRn2NMgDhN-2F-2Fcj2rRjI-2Bz6=
+rtJwpUWTuL6WyPMn6tad7ZD2fKUDbNkHtw-3D" alt=3D"" width=3D"1" height=3D"1" bo=
+rder=3D"0" style=3D"height:1px !important;width:1px !important;border-width=
+:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-rig=
+ht:0 !important;margin-left:0 !important;padding-top:0 !important;padding-b=
+ottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/>=
+</body><br><p id=3D"moe_internal_email_unsubscribe">If you'd like to unsubs=
+cribe and stop receiving these emails <a href=3D"https://link.internshala.c=
+om/v1/emailunsubscribe?q=3DOq80udRyJ.Nbb6Ja4YNjEkAtfnFp2orKRrt7cPCPCDHXMUqQ=
+rZWvicI4-RNlq2w.JmGOD8RXdXyhrDK6pOWTEyx7E1opCKd.4Io6CXQGmyBy2dC1rxuGUtiT23r=
+rhJXe1oZ_3c4QOuGxlsRKozfWoh9P84ZoXYNbVtOagz2WeklIxh6FEye_eKAuDScF2zwpJuPX3y=
+DE-jAF2dgm6GHyNVvCwnxsArpsCKe4vfSJh_YNH83EcL49zW5v4cTlt5MFCAtwgJrOfwTFbVzJA=
+cw-47l7VlTtC0eOUBAH1pAnGu_xS1Ty3vIeFDh493J8tmpuhS8TtfrZLuI6ZQWjad4.Eg-kze3X=
+XcPgB3bl0MvFXGuhufn7lrPDGHAALRSz_NsmtZp72prv9jHDlKEvetzxqVBafvbLGsAPlc_Lyka=
+sPbbfvSqwPlGkstze8bHfVm6fhHwlc0avGCD6Q">click here</a></p></html><img src=
+=3D"https://link.internshala.com/v1/emailopen?q=3DhReP2SdPFHJ6I5yjRmmQ4HjlE=
+6XnNxYnTFfqeUswV32eiHBS5qqwegvq-eB1BQEjnupULTgaRhidHtvSmfcO6uXm2oPA8Pf6rc2u=
+5_A1fLnmocxWgvcjMamBc2FVKPVIBLNWVm2WXFSeYnYPJfGlrHMUAzJW7rDQws48wl.cxdA2YD5=
+_o7WRMyxZ9cbAUkQ_e9k3.fYA-gq62S8cE4p8QmJ3pBN732yUmod9mTnwpeZcva37qQPuVwPtc6=
+By5qU6cdkRqI1ILLCMp42xq2A-MHhEf5LE458znXbCDjk8Vo5fkosrrqmoZMciNvTzees52bob9=
+1Lr3gUkU_dqxQ0n2g" alt=3D"" style=3D"display:none;width:1px;height:1px;" he=
+ight=3D"1" width=3D"1">

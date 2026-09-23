@@ -1,0 +1,182 @@
+Delivered-To: fshark49@gmail.com
+Received: by 2002:a05:6022:32c7:20b0:10a:fe50:5c58 with SMTP id u7-n2csp694081laq;
+        Tue, 11 Aug 2026 07:07:08 -0700 (PDT)
+X-Received: by 2002:a05:6820:151e:b0:6ae:aa38:a0aa with SMTP id 006d021491bc7-6b0a31e43acmr2009437eaf.32.1786457228356;
+        Tue, 11 Aug 2026 07:07:08 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1786457228; cv=pass;
+        d=google.com; s=arc-20260327;
+        b=KVsmjRpi4kY2ZtPeLvUd8+GGVg5LNfyTE1cW1+AQtltF78BIKKmQwICxUv5zKw4Fj2
+         CRxOQMpDTMjrhBJ21p0M/ZntOERIuPakl0TaixghGlzSE4ZMg7Jx2HuyeLN6vT+nW1rV
+         jtXRASByQV7h7cGRZtT6JYnyew8gVl2Oc8SwdexYQDQ6JJbR6qfAAvdtvE/zvXzcUjrP
+         FkDXHB3Ln8XKODuvrsrnI6xDBcJ8RzCZtM9jILZsTDXbvzSY/6teCqUEuOGE2naQxU1/
+         q6f5wYDIX5MaaU+/X8o0CkNNBvdEOJKHqZH0Ga56V5/CUMhW5KoLF1mhkJ+idnSubPPE
+         6CDw==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=ql8F2G6hPwCJAR/lb+VHeOpDT4Eg2QjkfyCPMHrk22Y=;
+        fh=TSY/7uMFeejXrRl1QEJjj7yon4ayRPWuOt2DP8ytrHk=;
+        b=RCVhbugUjVx4KUIpzYzJoBihyd6OqxfmG7JYm8oxnj21JXdzU/JZP3nOAnhE6j5k08
+         TzFIgBFjkagCRvykGCoSgDal6XDyrHM8NOnbKlgCKzopVIqBH/J2F8enDDGaa5hmDhD+
+         C9FW/bwmTuvXL9rGcYG6OgcJWpMp//Hn5JMYf2DnlC/PUFFko+R+SffJWm8sS9PuhubB
+         ALvuL3jK+ETLGBmzDx0b1m8IiFl96Ump9qPjl2E1wxUstMfeXuFSeQAj5oW26BvkGJTm
+         XyNKgZnuOS8WOWJI0pV/O1RL1viJcN7KgappcuAULjGvyKNAwkN8UBnSQn1Az0Khi+tM
+         ug1g==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=nsdjNoAc;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of vibhakarsenth@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=vibhakarsenth@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <vibhakarsenth@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 586e51a60fabf-45e1d09cae6sor733981fac.0.2026.08.11.07.07.08
+        for <fshark49@gmail.com>
+        (Google Transport Security);
+        Tue, 11 Aug 2026 07:07:08 -0700 (PDT)
+Received-SPF: pass (google.com: domain of vibhakarsenth@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=nsdjNoAc;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of vibhakarsenth@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=vibhakarsenth@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1786457228; cv=none;
+        d=google.com; s=arc-20260327;
+        b=EPUTdG5tfxwLve0Y6alf2x75PloBFU3fH7E+1iQ3iMQaHLxqzXb5rBnmBDYTml1JNJ
+         PXqeNVFLnzDIiZEmp8deL7ZSzBSB0sqCkjseUM1q0MG9eYl0/Axn+qeC0hDxr5IC6+nP
+         Hs0lAFcGzmC/EbECrbCLzhvnUzbZKGZCgtqlsJjf5wIiqPgTUBuzGCgi0zwFQD34SMi3
+         fnBN+uLmX/t0dxlEJAy6MRm7B8DTpW2JtUm9TfE9A/LulvExiCeiWnPaqzmB9o5ikfPx
+         2CrDBvG+WlGmchZLEDmL2FQlIj2i8s/1ixvtlW2FYreTmm8RcZXuoFEkGWJIZseLgAby
+         6mDw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=ql8F2G6hPwCJAR/lb+VHeOpDT4Eg2QjkfyCPMHrk22Y=;
+        fh=TSY/7uMFeejXrRl1QEJjj7yon4ayRPWuOt2DP8ytrHk=;
+        b=G5rUvTB77a33lAwjts/PgkxJ3jbQ9ymL5gJ2K3NyIxD/2LeHnEs65GgrT/a3qby1jR
+         ToqkrvRIb4J5jnFy53ZJlD2AWtcI7CkkYYkbeKR5nHelgELWSGCQWMHbMsr1tUJCflT2
+         akkMiR6PNROxImku0mKxJU8e8em4upMoUxzgmxT+aR3NtxxS1wAsrREXivSxPxtbDz5N
+         zBLUxtfj7gFu3GB7ZPfUEevWhr1uto7YvOw1H+adHW2MDD0UKxtGpsX2E0FzuUaXuZ6+
+         b4D8AH/LmCtEitMpnxkxm1WJrLbVVQz5/qy228jRZDzeuJxVdXGfPFpp8OCFeKarA8Rj
+         g3Rw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1786457228; x=1787062028; dara=google.com;
+        h=content-type:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:from:to:cc:subject:date:message-id:reply-to
+         :content-type;
+        bh=ql8F2G6hPwCJAR/lb+VHeOpDT4Eg2QjkfyCPMHrk22Y=;
+        b=nsdjNoAcrWEPRc7oJE80Uv3Ufk2qejP1Ly5oC40nQtrJ72TUCi/4LhaSLto03xuL1i
+         zVOHHLTFTcPAEvfDpdu/+h37S29DTykUAX0hCR+w5D1Qb3R1K8oC8BUVBYt3aejgsKZ+
+         /CdxuZ8F9RzxvWES1UEahGH2bWXDxOBMh/tgumfSQms3GnEjt2L8mQz9QS4Qf6x0qLkD
+         dyM94tAqTfgnlvsNVW2GeeZkcK7hvg3NP4UE+4nWzF8632QnbWMHr6nqo10ZpIrIejuF
+         05DAVFvVonizwgP89feJJJhaHtf23ll9VO0jwprEPV0JNDL3KLormJG1+E6rfPp0oGIC
+         zarg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1786457228; x=1787062028;
+        h=content-type:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:x-gm-gg:x-gm-message-state:from:to:cc:subject:date
+         :message-id:reply-to:content-type;
+        bh=ql8F2G6hPwCJAR/lb+VHeOpDT4Eg2QjkfyCPMHrk22Y=;
+        b=Pl87fMsXzoBlnURz7w16nZrty3ZEeg+zWSy782yCiLbDI4E3ijMlJeGTAS+la/gAj8
+         UgT0EgF/hcFJXghgmLOWFsapKkw4ylyTqXfohVCBH8gCoH2xGG/lCW3lHCzesFdr0NQn
+         hat2SIBffZNdIHmn4XcoEmfEc5pQGL7Htq0ymiJJTWT+i79E1CIExicezpg7u61lnxjX
+         w4Fc5K/V5Ud9xkGqtF60cYSABy0T97J0x+z1ieCtXixKdvrzHkOSEL2nZJr8rZHs/rE4
+         C6hci4/eUeZkuDEXnQfyMdfrIAXDwUwnl6ZUUsfLdN4G/PGwKRj2vT3cEw6Ns2NpKhdN
+         Orbg==
+X-Gm-Message-State: AOJu0YzhPEOkcDstMnxAFXBPisWVXwaKDKGeqrcoDTcqIgtY14QN6phu
+	YjI7MLlrHCSeicQQJYNqOh1XSRb1UK7tH20e2wPYsXqWvP4TbIUdHUoXjNPPF/dLq6KNN7N/487
+	wJpL8mJCxfKu4sIbLd7lj66lD6I7CjrhmSo7T
+X-Gm-Gg: AR+sD12H+75D6XYG9VEnc4URxjDT2FtcZyxuhD75vzKNOg8MoJp01CJ6f0E0Rz1fHEV
+	nS3LbFS8+YPHsYQTTscgyIVuhh+33PCBYPSqCUI7+J688eTxQaF2cLQoiiGdfZ8YwrGF1mtSiZK
+	SGFS0DDfpSaWCLux0bfj70Rx4QfKZNBKLD7jVx/2YTWAtT7kaNpQdLtyiSiVxvv9ps7VNiN/ujX
+	c+zT6YZQqxSjRRXtphmB3GqwiUCZlTPtYXRHVeHW+ZB+1p+LNcFChZSMFnD3ur6apargLXFKbBv
+	mObMep4OsfYiOHM9KXfjVGZEqW+Tyxk77AKgTT/IYIZwI/ZmdbUdeBeguznrQDYskSPeudbV8fl
+	S6OD1D4YzbnTccbmztCM2jlVYszpWrJi7ckQ=
+X-Received: by 2002:a05:6808:4f0b:b0:495:e997:528d with SMTP id
+ 5614622812f47-4b1fd5f69f9mr2655768b6e.3.1786457227578; Tue, 11 Aug 2026
+ 07:07:07 -0700 (PDT)
+MIME-Version: 1.0
+References: <CAAYrMF=CkGvzSmqYmnMgtdjmsP-X6h2WcgH+_VrgRCBEvs+88g@mail.gmail.com>
+ <CAJPrQtqs4LuUwGwAquF+fqyaiC74KYRUXq8j=ZimywiFT_Nt-Q@mail.gmail.com>
+In-Reply-To: <CAJPrQtqs4LuUwGwAquF+fqyaiC74KYRUXq8j=ZimywiFT_Nt-Q@mail.gmail.com>
+From: VIBHAKAR S <vibhakarsenth@gmail.com>
+Date: Tue, 11 Aug 2026 19:36:54 +0530
+X-Gm-Features: AUfX_mz0Jt4-LCkt32DDsEvj-rNes4EPK64s0ttBSpSGIyUJIRaPeLU7eBabpk4
+Message-ID: <CAAYrMF=4bAT+ZVvsetQaXy+C4A-2atfE043L-B5jBYTFANH0aA@mail.gmail.com>
+Subject: Fwd: MSME Template - From III-AI&DS(B)
+To: Umesh _ <fshark49@gmail.com>
+Content-Type: multipart/alternative; boundary="00000000000074d3bc0658c5fc8d"
+
+--00000000000074d3bc0658c5fc8d
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+---------- Forwarded message ---------
+From: kavitha R <rkavitha.pacet@gmail.com>
+Date: Tue, Jul 14, 2026, 8:53=E2=80=AFAM
+Subject: Re: MSME Template - From III-AI&DS(B)
+To: VIBHAKAR S <vibhakarsenth@gmail.com>
+
+
+Ok, include the budget and submit it in msme login
+
+On Tue, Jul 14, 2026 at 7:50=E2=80=AFAM VIBHAKAR S <vibhakarsenth@gmail.com=
+> wrote:
+
+> Hello mam,
+> I am Vibhakar from III-AI&DS(B), Our team for MSME consists of four
+> members, namely:
+>
+>    1. Vibhakar S
+>    2. Umeshwar M
+>    3. Sharmila L
+>    4. Vishruta M
+>
+> I have attached the template which you've sent in the group, we have
+> filled it out as much as we can, some of the fields like the budget, etc.
+> are left empty as we are unsure of it and need your guidance. We have
+> opened an account on MSME as you've said but we didn't apply since it say=
+s
+> details cannot be changed once after applying.
+>
+> Kindly take a look at our concept!
+>
+> With regards,
+> Vibhakar S.
+>
+
+--00000000000074d3bc0658c5fc8d
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto"></div><br><div class=3D"gmail_quote gmail_quote_container=
+"><div dir=3D"ltr" class=3D"gmail_attr">---------- Forwarded message ------=
+---<br>From: <strong class=3D"gmail_sendername" dir=3D"auto">kavitha R</str=
+ong> <span dir=3D"auto">&lt;<a href=3D"mailto:rkavitha.pacet@gmail.com">rka=
+vitha.pacet@gmail.com</a>&gt;</span><br>Date: Tue, Jul 14, 2026, 8:53=E2=80=
+=AFAM<br>Subject: Re: MSME Template - From III-AI&amp;DS(B)<br>To: VIBHAKAR=
+ S &lt;<a href=3D"mailto:vibhakarsenth@gmail.com">vibhakarsenth@gmail.com</=
+a>&gt;<br></div><br><br><div dir=3D"ltr">Ok, include the budget and submit =
+it in msme login</div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=
+=3D"gmail_attr">On Tue, Jul 14, 2026 at 7:50=E2=80=AFAM VIBHAKAR S &lt;<a h=
+ref=3D"mailto:vibhakarsenth@gmail.com" target=3D"_blank" rel=3D"noreferrer"=
+>vibhakarsenth@gmail.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail=
+_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204=
+,204);padding-left:1ex"><div dir=3D"ltr">Hello mam,<div>I am Vibhakar from=
+=C2=A0III-AI&amp;DS(B), Our team for MSME consists of four members, namely:=
+<br><ol><li>Vibhakar S</li><li>Umeshwar M</li><li>Sharmila L</li><li>Vishru=
+ta M<br></li></ol><div>I have attached the template which you&#39;ve sent i=
+n the group, we have filled it out as much as we can, some of the fields li=
+ke the budget, etc. are left empty as we are unsure of it and need your gui=
+dance. We have opened an account on MSME as you&#39;ve said but we didn&#39=
+;t apply since it says details cannot be changed once after applying.<br><b=
+r>Kindly take a look at our concept!<br><br>With regards,</div></div><div>V=
+ibhakar S.</div></div>
+</blockquote></div>
+</div>
+
+--00000000000074d3bc0658c5fc8d--

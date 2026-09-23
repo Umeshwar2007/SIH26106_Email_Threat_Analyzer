@@ -1,0 +1,21 @@
+Delivered-To: recipient@example.com
+Received: from mail.partner-portal.com (mail.partner-portal.com [198.51.100.44])
+    by mx.example.com (Postfix) with ESMTPS id 3A821C9
+    for <recipient@example.com>; Mon, 14 Sep 2026 09:12:00 +0000 (UTC)
+Received-SPF: pass client-ip=198.51.100.44;
+Authentication-Results: mx.example.com;
+    dkim=fail (body hash did not verify) header.i=@partner-portal.com;
+    spf=pass smtp.mailfrom=support@partner-portal.com;
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=partner-portal.com; s=s2026;
+    h=From:To:Subject:Date:Message-ID:Content-Type;
+    bh=TamperedBodyHashVal123456789=;
+    b=BrokenSignatureValueABCDEF==;
+From: Support <support@partner-portal.com>
+To: recipient@example.com
+Subject: Security Notification: Password Expiry Notice
+Date: Mon, 14 Sep 2026 09:10:00 +0000
+Message-ID: <notice-881920@partner-portal.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+This message body was altered in transit by an intermediary relay, causing the cryptographic body hash to differ from the DKIM signature.
